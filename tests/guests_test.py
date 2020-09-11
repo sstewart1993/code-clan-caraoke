@@ -6,19 +6,19 @@ from src.songs import Songs
 class TestGuests(unittest.TestCase):
     
     def setUp(self):
-        self.guests = Guests("Steve", 50.00, "Highway to Hell")
-        self.rooms = Rooms(6, 24.40, "Rock")
-        self.songs = Songs("Highway to Hell", "ACDC", "rock")
+        self.guests1 = Guests("Steve", 50.00, "Highway to Hell")
+        self.guests2 = Guests("Rob", 26.40, "Sk8er Boi")
+        self.guests3 = Guests("Sally", 68.30, "9 to 5")
 
     def test_name(self):
-        name = self.guests.name
+        name = self.guests1.name
         self.assertEqual("Steve", name)
 
     def test_wallet(self):
-        wallet = self.guests.wallet
+        wallet = self.guests1.wallet
         self.assertEqual(50.00, wallet)
 
     def test_fav_song(self):
-        fav_song = self.guests.fav_song
-        self.assertEqual("Highway to Hell", fav_song)
+        fav_song = self.guests2.fav_song
+        self.assertEqual("Sk8er Boi", fav_song)
     
