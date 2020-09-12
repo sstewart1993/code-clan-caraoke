@@ -27,7 +27,7 @@ class TestRooms(unittest.TestCase):
 
     # def test_song_playing(self):
     #     song = self.rooms1.song
-    #     self.assertEqual("Highway to Hell", song)
+    #     self.assertEqual("Thunderstruck", song)
 
     def test_check_in(self):
         how_many_in_the_room = self.rooms1.people + 1
@@ -47,6 +47,9 @@ class TestRooms(unittest.TestCase):
     def test_fee(self):
         fee = self.rooms3.fee
         self.assertEqual(2.50, fee)
+
+
+
 
 
     

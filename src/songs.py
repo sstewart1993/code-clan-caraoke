@@ -4,3 +4,4 @@ class Songs:
         self.name = name
         self.artist = artist
         self.genre = genre
+

@@ -1,5 +1,6 @@
-from src.guests import Guests
-from src.songs import Songs
+# from src.guests import Guests
+# from src.songs import Songs
+# from src.rooms import Rooms
 
 
 class Rooms:
@@ -9,10 +10,9 @@ class Rooms:
         self.till = till
         self.genre = genre 
         self.fee = fee
+        self.songs = {}
 
 
-
-    
     def check_in(self):
         people = self.people + 1
         return people
@@ -25,6 +25,9 @@ class Rooms:
         if self.people > 9:
             self.check_out
             return "Room is full"
+
+    # def add_song(self):
+    #     self.rooms1.append(self.songs2)
 
         
 
