@@ -13,8 +13,8 @@ class TestSongs(unittest.TestCase):
         self.assertEqual("Highway to Hell", title)
 
     def test_song_artist(self):
-        artist = self.songs1.artist
-        self.assertEqual("ACDC", artist)
+        artist = self.songs2.artist
+        self.assertEqual("Avril Lavigne", artist)
 
     def test_genre(self):
         genre = self.songs3.genre
