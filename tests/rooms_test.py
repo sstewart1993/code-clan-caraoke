@@ -5,9 +5,9 @@ from src.songs import Songs
 
 class TestRooms(unittest.TestCase):
     def setUp(self):
-        self.rooms1 = Rooms(6, 24.40, "Rock", 6.20, "Highway to Hell")
-        self.rooms2 = Rooms(10, 32.0, "Pop", 7.00, "Sk8er Boi")
-        self.rooms3 = Rooms(2, 12.20, "Country", 2.50, "9 to 5")
+        self.rooms1 = Rooms(6, 24.40, "Rock", 6.20)
+        self.rooms2 = Rooms(10, 32.0, "Pop", 7.00)
+        self.rooms3 = Rooms(2, 12.20, "Country", 2.50)
 
         self.songs1 = Songs("Highway to Hell", "ACDC", "rock")
         self.songs2 = Songs("Sk8er Boi", "Avril Lavigne", "pop")
@@ -25,9 +25,9 @@ class TestRooms(unittest.TestCase):
         genre = self.rooms1.genre
         self.assertEqual("Rock", genre)
 
-    def test_song_playing(self):
-        song = self.rooms1.song
-        self.assertEqual("Highway to Hell", song)
+    # def test_song_playing(self):
+    #     song = self.rooms1.song
+    #     self.assertEqual("Highway to Hell", song)
 
     def test_check_in(self):
         how_many_in_the_room = self.rooms1.people + 1
@@ -40,21 +40,13 @@ class TestRooms(unittest.TestCase):
     def test_max_capacity(self):
         how_many_in_the_room = self.rooms2.people
         if how_many_in_the_room >= 10:
+            now_in_room = self.rooms2.people - 1
+            self.assertEqual(9, now_in_room)
             return print("Room is full")
     
     def test_fee(self):
         fee = self.rooms3.fee
         self.assertEqual(2.50, fee)
-
-    # def test_change_song(self):
-    #     new_song = Rooms.change_song(Rooms.song)
-    #     self.assertEqual("Back in Black", new_song)
-
-
-
-    
-
-        
 
 
     

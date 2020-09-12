@@ -4,12 +4,12 @@ from src.songs import Songs
 
 class Rooms:
 
-    def __init__(self, people, till, genre, fee, song):
+    def __init__(self, people, till, genre, fee):
         self.people = people
         self.till = till
         self.genre = genre 
         self.fee = fee
-        self.song = song
+
 
 
     
@@ -23,11 +23,10 @@ class Rooms:
 
     def max_capacity(self):
         if self.people > 9:
+            self.check_out
             return "Room is full"
 
-
-    def change_song(self, songs):
-        self.song[5] = "Back in Black"
+        
 
     # def fav_song(self, guests):
     #     if fav_song == self.guests2.fav_song:
