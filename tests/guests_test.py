@@ -6,9 +6,9 @@ from src.songs import Songs
 class TestGuests(unittest.TestCase):
     
     def setUp(self):
-        self.rooms1 = Rooms(6, 24.40, "Rock", 6.20)
-        self.rooms2 = Rooms(10, 32.0, "Pop", 7.00)
-        self.rooms3 = Rooms(2, 12.20, "Country", 2.50)
+        self.rooms1 = Rooms(6, 24.40, "Rock", 6.20, "Highway to Hell")
+        self.rooms2 = Rooms(10, 32.0, "Pop", 7.00, "Sk8er Boi")
+        self.rooms3 = Rooms(2, 12.20, "Country", 2.50, "9 to 5")
 
         self.guests1 = Guests("Steve", 50.00, "Highway to Hell")
         self.guests2 = Guests("Rob", 1.50, "Sk8er Boi")
